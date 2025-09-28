@@ -1,12 +1,8 @@
-#
-# ps9pr2.py (Problem Set 9, Problem 2)
-#
-# A Connect-Four Player class 
-#  
+
+# A Connect-Four Player class  
 
 from ps9pr1 import Board
 
-# write your class below.
 class Player:
     '''player class'''
     def __init__(self, checker):
