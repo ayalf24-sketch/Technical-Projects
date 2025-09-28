@@ -1,8 +1,5 @@
-#
-# ps9pr4.py (Problem Set 9, Problem 4)
-#
+
 # AI Player for use in Connect Four  
-#
 
 import random  
 from ps9pr3 import *
@@ -92,3 +89,4 @@ class AIPlayer(Player):
             
         
     
+
