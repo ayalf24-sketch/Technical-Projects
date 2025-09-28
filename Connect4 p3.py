@@ -1,8 +1,5 @@
-#
-# ps9pr3.py  (Problem Set 9, Problem 3)
-#
-# Playing the game 
-#   
+
+# Playing the game   
 
 from ps9pr1 import Board
 from ps9pr2 import Player
@@ -16,7 +13,7 @@ def connect_four(p1, p2):
           One player should use 'X' checkers and the other player should
           use 'O' checkers.
     """
-    # Make sure one player is 'X' and one player is 'O'.
+    
     if p1.checker not in 'XO' or p2.checker not in 'XO' \
        or p1.checker == p2.checker:
         print('need one X player and one O player.')
@@ -53,7 +50,7 @@ def process_move(p, b):
         
         
 class RandomPlayer(Player):
-    '''unintellegent ai player'''
+    '''unintelligent ai player'''
     def next_move(self, b):
         self.num_moves+= 1
         randlst = []
@@ -64,3 +61,4 @@ class RandomPlayer(Player):
         return col
         
     
+
