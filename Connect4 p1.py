@@ -1,15 +1,9 @@
-#
-# ps9pr1.py (Problem Set 9, Problem 1)
-#
+
 # A Connect Four Board class
-#
-# Computer Science 111
-#
 
 class Board:
     """ a data type for a Connect Four board with arbitrary dimensions
     """   
-    ### add your constructor here ###
     def __init__(self, height, width):
         self.width = width
         self.height = height
@@ -19,18 +13,17 @@ class Board:
     def __repr__(self):
         """ Returns a string that represents a Board object.
         """
-        s = ''         #  begin with an empty string
+        s = ''       
 
-        # add one row of slots at a time to s
+        
         for row in range(self.height):
-            s += '|'   # one vertical bar at the start of the row
+            s += '|'  
 
             for col in range(self.width):
                 s += self.slots[row][col] + '|'
 
-            s += '\n'  # newline at the end of the row
+            s += '\n'  
 
-        ### add your code here ###
         s+= '-'*((self.width*2)+1) + '\n'
         for i in range(self.width):
            s+= ' ' + str(i%10)+ ''
@@ -46,7 +39,7 @@ class Board:
         assert(checker == 'X' or checker == 'O')
         assert(col >= 0 and col < self.width)
         
-        ### put the rest of the method here ###
+        
         row = 0
         while row < self.height-1 and self.slots[row+1][col] == ' ':
             row += 1
@@ -54,7 +47,7 @@ class Board:
     
         
     
-    ### add your reset method here ###
+    
     def reset(self):
         '''resets every board value back to blank'''
         for r in range(self.height):
@@ -79,7 +72,6 @@ class Board:
             else:
                 checker = 'X'
 
-    ### add your remaining methods here
     def can_add_to(self, col):
         '''checks if a col is possible to be added to'''
         if col > self.width -1 or col < 0:
@@ -158,3 +150,4 @@ class Board:
         return False
         
         
+
